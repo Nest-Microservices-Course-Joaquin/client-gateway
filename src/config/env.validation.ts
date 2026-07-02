@@ -5,6 +5,8 @@ export const envSchema = z.object({
   PORT: z.coerce.number().int().min(1).default(3000),
   PRODUCTS_MS_HOST: z.string().default('localhost'),
   PRODUCTS_MS_PORT: z.coerce.number().int().min(1).default(3001),
+  ORDERS_MS_HOST: z.string().default('localhost'),
+  ORDERS_MS_PORT: z.coerce.number().int().min(1).default(3002),
 });
 
 export type EnvVars = z.infer<typeof envSchema>;
